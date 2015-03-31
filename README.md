@@ -1,2 +1,13 @@
-# pirate_paris
-This is a version of the https://github.com/ajashton/pirate-map style to TileMille for big Scales
+Pirate Paris
+============
+
+This is a extension of the Pirate Map Style from https://github.com/ajashton/pirate-map.
+
+I used this style as a base to goes in the bigest scale and get some like:
+
+add a image of the style...
+
+
+See <http://mapbox.com/blog/sketchy-maps/>. Requires TileMill >= 0.10.0.
+
+You will also need the free font [Mutlu](http://www.fontsquirrel.com/fonts/Mutlu).

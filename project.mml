@@ -1,0 +1,356 @@
+{
+  "bounds": [
+    -15.4687,
+    28.3044,
+    19.6875,
+    53.3309
+  ],
+  "center": [
+    2.3508,
+    48.8567,
+    8
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 8,
+  "maxzoom": 14,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "labels.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "id": "bath",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-bathymetry.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "bath",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "id": "grat",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-graticules-1.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "grat",
+      "extent": [
+        -179.99998938710374,
+        -85.051,
+        180,
+        85.051
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "id": "grat10",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-graticules-10.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "grat10",
+      "extent": [
+        -179.99998938710374,
+        -85.051,
+        180,
+        85.051
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "id": "states",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-admin-1-states-provinces-lines.zip",
+        "id": "states",
+        "project": "pirate-paris",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "states",
+      "extent": [
+        -139.04719194227846,
+        -49.25074024841062,
+        178.44862226797608,
+        81.13822602001463
+      ],
+      "advanced": {}
+    },
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-admin-0-countries.zip",
+        "type": "shape"
+      },
+      "extent": [
+        -179.99978348919961,
+        -85.051,
+        180,
+        83.63381093402975
+      ],
+      "class": "",
+      "srs-name": "900913",
+      "advanced": {}
+    },
+    {
+      "geometry": "polygon",
+      "id": "paper",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-900913-bounding-box.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "paper"
+    },
+    {
+      "extent": [
+        1.3827634217789744,
+        47.976474187722175,
+        3.5762570162965153,
+        49.2764228507296
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, way_area AS area, COALESCE(leisure) AS type\n  FROM planet_osm_polygon\n  WHERE leisure = 'nature_reserve' OR leisure = 'garden'\n  ORDER BY way_area DESC\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "153928.52,6102941.87,398107.11,6321895.39",
+        "dbname": "thinkinggis_osm_idf",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "noviembre",
+        "id": "nature_reserve",
+        "project": "pirate-paris",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "nature_reserve",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nature_reserve"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -139.04719194227846,
+        -49.25074024841062,
+        178.44862226797608,
+        81.13822602001463
+      ],
+      "id": "provinces",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-admin-1-states-provinces-lines.zip",
+        "id": "provinces",
+        "project": "pirate-paris",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "provinces"
+    },
+    {
+      "extent": [
+        1.3827634217789744,
+        47.976474187722175,
+        3.5762570162965153,
+        49.2764228507296
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, way_area AS area, COALESCE(landuse) AS type\n  FROM planet_osm_polygon\n  WHERE landuse = 'forest' OR landuse = 'grass' OR landuse = 'park' OR landuse = 'cemetery' OR landuse = 'pedestrian' OR landuse = 'wood'\n  ORDER BY way_area DESC\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "153928.52,6102941.87,398107.11,6321895.39",
+        "dbname": "thinkinggis_osm_idf",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "noviembre",
+        "id": "forest",
+        "project": "pirate-paris",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "forest",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "forest"
+    },
+    {
+      "extent": [
+        1.3827634217789744,
+        47.976474187722175,
+        3.5762570162965153,
+        49.2764228507296
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "153928.52,6102941.87,398107.11,6321895.39",
+        "dbname": "thinkinggis_osm_idf",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "noviembre"
+      },
+      "id": "water",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water"
+    },
+    {
+      "extent": [
+        1.3827634217789744,
+        47.976474187722175,
+        3.5762570162965153,
+        49.2764228507296
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "153928.52,6102941.87,398107.11,6321895.39",
+        "dbname": "thinkinggis_osm_idf",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "noviembre"
+      },
+      "id": "buildings",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "buildings"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        0.5577585700181061,
+        47.79316824824252,
+        3.942579299208575,
+        49.436685857301114
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,\nCASE\nWHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n WHEN highway IN ('service', 'track') THEN 'service'\n WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n ELSE 'other' END AS stylegroup\n FROM planet_osm_line\n WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n AND (tunnel IS NULL OR tunnel = 'no')\n AND (bridge IS NULL OR bridge = 'no')\n ORDER BY z_order\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "62089.4,6072514.12,438885.92,6349285.31",
+        "dbname": "thinkinggis_osm_idf",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "noviembre",
+        "id": "roads",
+        "project": "pirate-paris",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "roads",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads"
+    },
+    {
+      "geometry": "polygon",
+      "id": "country-name",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-admin-0-countries.zip",
+        "id": "country-name",
+        "project": "pirate-paris",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "country-name",
+      "extent": [
+        -179.99978348919961,
+        -85.051,
+        180,
+        83.63381093402975
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "id": "marine_label",
+      "class": "",
+      "Datasource": {
+        "file": "http://gis-data.s3.amazonaws.com/ds/marine-labels-1.0.4.zip",
+        "id": "marine_label",
+        "project": "pirate-paris",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "marine_label"
+    },
+    {
+      "geometry": "point",
+      "id": "cities",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/David/Documents/Recursos TileMill/shp/Pirate Map/10m-populated-places-simple.zip",
+        "id": "cities",
+        "project": "pirate-paris",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "cities",
+      "extent": [
+        -179.58997888396897,
+        -81.17908472282718,
+        179.38330358817024,
+        82.48332318035943
+      ],
+      "advanced": {}
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Pirate Paris",
+  "description": "",
+  "attribution": ""
+}
