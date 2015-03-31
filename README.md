@@ -5,8 +5,9 @@ This is a extension of the Pirate Map Style from https://github.com/ajashton/pir
 
 I used this style as a base to goes in the bigest scale and get some like:
 
-add a image of the style...
+![Image of Paris with the pirate_paris style]
 
+(./images/pirate-paris.png)
 
 See <http://mapbox.com/blog/sketchy-maps/>. Requires TileMill >= 0.10.0.
 
